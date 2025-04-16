@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Compliment Machine</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #f0e7ff, #d6f0ff);
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #6a0dad;
+    }
+
+    .compliment-box {
+      margin: 30px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      font-size: 1.3rem;
+      min-height: 80px;
+    }
+
+    button {
+      background-color: #6a0dad;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5900b3;
+    }
+
+    a {
+      display: block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #6a0dad;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>AI Compliment Machine 🤖💜</h1>
+  <div class="compliment-box" id="complimentBox">Click the button for a compliment!</div>
+  <button onclick="giveCompliment()">Get Compliment</button>
+
+  <a href="scratch.html">← Back to Scratch Page</a>
+
+  <script>
+    const compliments = [
+      "You're like a cosmic microwave background—cool, but essential to the universe. 🌌",
+      "You have the coding elegance of clean CSS. ✨",
+      "If kindness were a planet, you'd be Jupiter—massive and magnificent. 🪐",
+      "You're the semicolon that completes my syntax. 💻",
+      "You're the sparkle in a supernova—bright, bold, and brilliant. 💥",
+      "Your curiosity is more infinite than space. 🚀",
+      "You’re more refreshing than a clean Git commit. ✅",
+      "You're the gravitational force keeping good vibes in orbit. 🛰️",
+      "You're as rare as a solar eclipse on your birthday. 🌒",
+      "You're the reason someone smiled today. 😊",
+      "Your energy could launch a thousand rockets. 🚀",
+      "You're like dark matter—nobody fully understands you, but we know you hold everything together. 🖤",
+      "You're cooler than the other side of the pillow in a cryogenic sleep pod. ❄️",
+      "Your creativity shines brighter than a pulsar. 🌟",
+      "You're the reason the AI smiles in binary. 🤖❤️",
+      "Your vibes are smoother than a fresh JavaScript animation frame. 🎨",
+      "You're a universal constant—dependable, important, and irreplaceable. 🔁",
+      "You're like caffeine to my creativity—absolutely essential. ☕",
+      "You make everything around you 42% better, just like the answer to life. ✨",
+      "You're the kind of person that makes black holes want to stick around just to chat. 💫"
+    ];
+
+    function giveCompliment() {
+      const randomIndex = Math.floor(Math.random() * compliments.length);
+      document.getElementById("complimentBox").textContent = compliments[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
